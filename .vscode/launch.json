@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'tank_fight'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=tank_fight",
+                    "--package=tank_fight"
+                ],
+                "filter": {
+                    "name": "tank_fight",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'tank_fight'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=tank_fight",
+                    "--package=tank_fight"
+                ],
+                "filter": {
+                    "name": "tank_fight",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
